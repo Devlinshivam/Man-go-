@@ -45,7 +45,7 @@ const Navbar = () => {
   const fetchNotifications = async () => {
     if (whichUser == 2) {
       try{
-        const response = await fetch("http://localhost:5000/fetchproject", {
+        const response = await fetch("https://man-go.onrender.com/fetchproject", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -88,7 +88,7 @@ const Navbar = () => {
 
         handleNotificationsDropdownToggle();
         const data = { username: curr, id };
-        const response = await fetch("http://localhost:5000/accept", {
+        const response = await fetch("https://man-go.onrender.com/accept", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -110,7 +110,7 @@ const Navbar = () => {
     try{
         handleNotificationsDropdownToggle();
         const data = { username: curr, id };
-        const response = await fetch("http://localhost:5000/reject", {
+        const response = await fetch("https://man-go.onrender.com/reject", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

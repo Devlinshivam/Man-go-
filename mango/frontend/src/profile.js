@@ -20,7 +20,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/myprofile/${id}`, {
+        const response = await fetch(`https://man-go.onrender.com/myprofile/${id}`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -60,7 +60,7 @@ const Profile = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5000/update", {
+      const response = await fetch("https://man-go.onrender.com/update", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

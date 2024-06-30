@@ -42,7 +42,7 @@ const ChatBox = ({ onClose }) => {
 
   const fetchChats = async () => {
     try {
-      const response = await fetch('http://localhost:5000/getChats', {
+      const response = await fetch('https://man-go.onrender.com/getChats', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -66,7 +66,7 @@ const ChatBox = ({ onClose }) => {
     };
 
     try {
-      const response = await fetch('http://localhost:5000/addChat/'+id, {
+      const response = await fetch('https://man-go.onrender.com/addChat/'+id, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

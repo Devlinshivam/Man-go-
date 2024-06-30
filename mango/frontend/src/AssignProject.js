@@ -22,7 +22,7 @@ const AssignProject = () => {
     let data2 = data;
     try {
       console.log(data2);
-      const response = await fetch("http://localhost:5000/signupp", {
+      const response = await fetch("https://man-go.onrender.com/signupp", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

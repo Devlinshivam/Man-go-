@@ -12,7 +12,7 @@ const Developers = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/developers/${id}`, {
+        const response = await fetch(`https://man-go.onrender.com/developers/${id}`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
