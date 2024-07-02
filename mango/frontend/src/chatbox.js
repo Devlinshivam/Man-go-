@@ -8,15 +8,15 @@ const ChatBox = ({ onClose }) => {
   const { id } = useParams();
   const [chats, setChats] = useState([
         {sender: "messi",
-        content: "i am best footballer"},
+        content: "I am best freelancer"},
         {
             sender: "Ronaldo",
-            content: "Teri Maa ki ch***  i am best "   
+            content: "No , i am best freelancer "   
         },
 
         {
             sender: "Aditya",
-            content: "i am best"   
+            content: "Me and my mango team is best"   
         },
 
         {
