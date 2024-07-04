@@ -9,8 +9,6 @@ const ChatBox = ({ onClose }) => {
   const [chats, setChats] = useState([
 
 
-
-
   ]);
   const [message, setMessage] = useState("");
 
