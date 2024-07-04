@@ -224,7 +224,7 @@ const ShowProfile = () => {
           <hr className="mb-4" />
         </div>
       </div>
-      <ChatIcon />
+     {curr && (<ChatIcon />)}
     </>
   );
 };

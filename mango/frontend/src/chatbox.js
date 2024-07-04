@@ -7,26 +7,7 @@ const ChatBox = ({ onClose }) => {
   const { curr, whichUser, loading, setCurr, setWhichUser } = useAuth();
   const { id } = useParams();
   const [chats, setChats] = useState([
-        {sender: "messi",
-        content: "I am best freelancer"},
-        {
-            sender: "Ronaldo",
-            content: "No , i am best freelancer "   
-        },
 
-        {
-            sender: "Aditya",
-            content: "Me and my mango team is best"   
-        },
-
-        {
-          sender: "messi",
-          content: "i agree"
-        },
-        {
-                sender: "Ronaldo",
-                content: "i agree"   
-        },
 
 
 
