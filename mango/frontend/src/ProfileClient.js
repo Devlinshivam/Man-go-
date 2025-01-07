@@ -24,8 +24,6 @@ const ProfileClient = () => {
 
         const data = await response.json();
         setEditedFields(data.result);
-        // editedFields.project_ids=data.result.project_ids;
-        // editedFields.skills=data.result.skills;
 
         console.log(editedFields.project_ids);
       } catch (error) {

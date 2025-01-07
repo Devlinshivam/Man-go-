@@ -15,7 +15,7 @@ const AssignProject = () => {
 
   
   const handleClick = async (e) => {
-    console.log(id);
+
     data.lancer_id = id;
 
     data.client_id = client;
