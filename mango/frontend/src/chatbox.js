@@ -3,8 +3,9 @@ import { useParams } from "react-router-dom";
 import useAuth from "./useauth";
 import { io } from "socket.io-client";
 
-const socket = io("https://man-go.onrender.com"); // Connect to the backend WebSocket server
-
+const socket = io('https://man-go.onrender.com', {
+  transports: ['websocket'], // Use only WebSocket transport
+});
 const ChatBox = ({ onClose }) => {
   const { curr } = useAuth();
   const { id } = useParams();
@@ -13,6 +14,7 @@ const ChatBox = ({ onClose }) => {
 
   useEffect(() => {
     if (curr) {
+   
       fetchChats();
 
       // Listen for real-time chat messages

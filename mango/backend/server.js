@@ -5,7 +5,7 @@ const app = express();
 const jwt = require('jsonwebtoken');
 const http = require("http");
 // routes
-// const chat = require("./routes/chats")
+
 const devroutes = require("./routes/developers")
 const loginroutes = require('./routes/login');
 const signuproutes = require('./routes/signupall');
@@ -16,6 +16,7 @@ const myprofileroutes = require('./routes/myprofile');
 const authroutes = require('./routes/authroutes');
 const notificationroutes = require('./routes/notifroutes');
 const setupRealtimeChat = require("./realtimechat");
+const paymentRoutes = require('./routes/payment');
 
 const url =
   "mongodb+srv://malay:1234@cluster0.t0pj9ge.mongodb.net/tt?retryWrites=true&w=majority&appName=Cluster0";
@@ -32,7 +33,7 @@ app.use(express.json());
 app.use(authroutes);
 app.use(signuproutes);
 app.set("views", "src");
-// app.use(chat);
+app.use('/payment', paymentRoutes);
 app.use(loginroutes);
 app.use(raterouter);
 app.use(updateprofileroutes);
