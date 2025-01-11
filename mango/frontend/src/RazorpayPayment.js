@@ -22,7 +22,7 @@ const RazorpayPayment = ({ cost, onPaymentSuccess }) => {
       }
 
       // Step 1: Call backend to create an order
-      const orderResponse = await fetch('http://localhost:5000/payment/create-order', {
+      const orderResponse = await fetch('https://man-go.onrender.com/payment/create-order', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ amount: parseInt(cost) , currency: 'INR' }), // Amount in paise
@@ -52,7 +52,7 @@ const RazorpayPayment = ({ cost, onPaymentSuccess }) => {
         order_id: order.id,
         handler: async (response) => {
           // Step 3: Verify payment on backend
-          const verifyResponse = await fetch('http://localhost:5000/payment/verify-payment', {
+          const verifyResponse = await fetch('https://man-go.onrender.com/payment/verify-payment', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(response),
