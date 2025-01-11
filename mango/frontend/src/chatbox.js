@@ -3,16 +3,16 @@ import { useParams } from "react-router-dom";
 import useAuth from "./useauth";
 import { io } from "socket.io-client";
 
-const socket = io('https://man-go.onrender.com',);
+
 const ChatBox = ({ onClose }) => {
   const { curr } = useAuth();
   const { id } = useParams();
   const [chats, setChats] = useState([]);
   const [message, setMessage] = useState("");
-
+  const socket = io('https://man-go.onrender.com');
   useEffect(() => {
     if (curr) {
-   
+
       fetchChats();
 
       // Listen for real-time chat messages
