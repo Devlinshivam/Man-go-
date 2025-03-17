@@ -19,10 +19,10 @@ const setupRealtimeChat = require("./realtimechat");
 const paymentRoutes = require('./routes/payment');
 
 const url =
-  "mongodb+srv://malay:1234@cluster0.t0pj9ge.mongodb.net/tt?retryWrites=true&w=majority&appName=Cluster0";
+  "mongodb+srv://Shivam:3wrkC1O2FmdxCpgN@mango.dk09q.mongodb.net/?retryWrites=true&w=majority&appName=mango";
 mongoose
   .connect(url)
-  .then(() => console.log("Connected to database"))
+  .then(() => console.log(`Connected to database: ${mongoose.connection.name}`))
   .catch((error) => console.log(error));
 
 const server = http.createServer(app);

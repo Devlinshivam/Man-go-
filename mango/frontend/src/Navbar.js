@@ -93,11 +93,11 @@ const Navbar = () => {
   };
 
   return (
-    <div className="sticky top-0 z-50 bg-teal-100 flex justify-between items-center h-15 shadow-md px-6">
+    <div className="sticky top-0 z-50 bg-teal-100 flex justify-between items-center h-20 shadow-md px-6">
       {/* Left side (Logo and Home) */}
       <div className="flex items-center space-x-6">
         <a href="/home">
-          <img src='/images/pro.svg' className="w-16 h-16 cursor-pointer" alt="Logo" />
+          <img src='/images/Mango.png' className="w-20 h-10 cursor-pointer" alt="Logo" />
         </a>
        
         <DropdownButton id="dropdown-basic-button" title="Services" className="custom-dropdown">

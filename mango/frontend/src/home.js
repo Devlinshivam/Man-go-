@@ -4,6 +4,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Navbar from "./Navbar";
 import { useNavigate } from "react-router-dom";
 import PopularServices from "./Popularservices";
+import Premium from "./Premium";
 
 import Footer from "./footer";
 
@@ -28,13 +29,13 @@ function Home() {
       <Navbar />
       <div className="relative">
   <Carousel infiniteLoop useKeyboardArrows autoPlay showThumbs={false}>
-    <div>
+    {/* <div>
       <img
         className="h-screen w-full object-cover"
         src="/images/img1.jpg"
         alt="Slide 1"
       />
-    </div>
+    </div> */}
     <div>
       <img
         className="h-screen w-full object-cover"
@@ -73,6 +74,7 @@ function Home() {
   </div>
 </div>
 <PopularServices />
+<Premium/>
 <Footer />
 
     </>
